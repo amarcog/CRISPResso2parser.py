@@ -79,10 +79,10 @@ See code comments and excel example for further details.
 
 # SUMMARY
 
-- CRISPResso2parser*.py scripts summarize and allow easier visualization of results coming from CRISPResso2 analysis.
+- CRISPResso2parser.py scripts summarize and allow easier visualization of results coming from CRISPResso2 analysis.
 - CRISPResso2parser-CLONAL.py script automatically identifies pure clones and determines their genotype.
 - CRISPResso2parser-HDR.py script automatically identifies pure clones edited with multiple HDR templates.
  
  
- **On balance, CRISPResso2parser*.py scripts further expands the CRISPResso2 applications for
+ **On balance, CRISPResso2parser.py scripts further expands the CRISPResso2 applications for
  high throughput screening of genome edited clonal lines.**
