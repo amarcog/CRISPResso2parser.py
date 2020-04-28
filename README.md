@@ -32,7 +32,7 @@ number and percentages of reads aligned, modified, unmodified, with frameshift m
 (if)**. This script reports with NaN values samples with unsuccesful CRISPResso analysis or fs if related values\
 when the coding sequence is NOT provided to CRISPResso2. See code comments and excel example for further details.
 
-## CRISPResso2parser_CLONAL.py
+## CRISPResso2parser_clonal.py
 
 This script is useful when results in CRISPResso_on_···subfolders correspond to samples of clonal lines derived from a\
 editing experiment. The code generates an excel file containing for each sample (CRISPResso2 subfolder) the same values as\
@@ -44,14 +44,14 @@ zygosity and corresponding genotype (x/x).**
 
 The ***"clone purity value"*** is defined as the Minimun percentage to assume a pure clone. Allele1 percentage must be higher\
 than this value to be classified as homozygotes. Allele 1 and Allele2 percentages must be higher than this value/2 to be\
-classified as heterozygotes. Otherwise clones will be classified as non-pure genotyped clones.\
+classified as heterozygotes. Otherwise clones will be classified as non-pure genotyped clones.
 
 This script will ask to introduce this value and if you provided a coding sequence (CDS) to CRISPResso2 (YES or NO).\
 If CDS was NOT provided possible genotypes in the _CLONAL-woCDS.xlsx_ file are _wt/wt, mut/wt, mut/mut_. mut means mutated.\
 If CDS was provided possible genotypes in the _CLONAL-wCDS.xlsx_ file are _wt/wt, if/if, fs/fs, fs/wt, if/wt or fs/if._\
 See code comments and excel example for further details.
 
-## CRISPResso2parser_CLONAL-HDR.py
+## CRISPResso2parser_clonal-HDR.py
 
 This script is useful when results in CRISPResso_on_···subfolders correspond to samples of clonal lines derived from a\
 editing experiment for knock-in generation by homologous directed repair (HDR). The code generates an excel file containing\
@@ -80,8 +80,8 @@ See code comments and excel example for further details.
 # SUMMARY
 
 - CRISPResso2parser.py scripts summarize and allow easier visualization of results coming from CRISPResso2 analysis.
-- CRISPResso2parser-CLONAL.py script automatically identifies pure clones and determines their genotype.
-- CRISPResso2parser-HDR.py script automatically identifies pure clones edited with multiple HDR templates.
+- CRISPResso2parser_clonal.py script automatically identifies pure clones and determines their genotype.
+- CRISPResso2parser_clonal-HDR.py script automatically identifies pure clones edited with multiple HDR templates.
  
  
  **On balance, CRISPResso2parser.py scripts further expands the CRISPResso2 applications for
