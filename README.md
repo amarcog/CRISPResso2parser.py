@@ -63,7 +63,7 @@ templates are concurrently used.
 must be run providing. Ensure that the parameter --plot_window_size allow to include your 
 expected HDR modifications into the Alleles_frequency_table_around_sgRNA_*.txt***\
  \
-Aditionally of _clone purity value_ and _CDS_ supply, this script will ask to introduce:\
+Aditionally of _clone purity value_ and _CDS_ supply, this script will ask to introduce:
 
 - Your HDR templates names separated by 1 white space:
 
