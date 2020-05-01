@@ -1,0 +1,88 @@
+CRISPResso version 2.0.32
+[Command used]:
+/anaconda2/bin/CRISPResso -a GCACCTGCCACCCCTTCTTTGGATATACTCCAGTGCTCACTCTCCCTCAAGACCTACGTGAATGTTCACATGTGGCTTAAAGCCTCCCTTCCTCTTACTCTCTGCCTGCAGGATGTGCGACGTGTGCCTGGAGTAGCCCCGACTCTTGTACGGTCGGCATCTGAGACCAGTGAGAAACGCCCCTTCATGTGTGCTTACCCAGGCTGCAATAAGAGATATTTTAAGCTGTCCCACTTACAGATGCACAGCAGGAAGCACACTGGTAAGTGTGCCCGCTGTCCAGTCTTGGGCAAACATGGTTCAAGAGC -r1 MSJ20_37_L001_R1_001.fastq.gz -r2 MSJ20_37_L001_R2_001.fastq.gz -g AGCCCCGACTCTTGTACGGT -q 0 -s 0 --exclude_bp_from_left 15 --exclude_bp_from_right 15 -w 1 --trim_sequences --trimmomatic_options_string ILLUMINACLIP:/Users/andresmg/MSJ20/TruSeq3-PE.fa:0:90:10:0:true -n WT1_KO_Cr1_C1-D1 -c GATGTGCGACGTGTGCCTGGAGTAGCCCCGACTCTTGTACGGTCGGCATCTGAGACCAGTGAGAAACGCCCCTTCATGTGTGCTTACCCAGGCTGCAATAAGAGATATTTTAAGCTGTCCCACTTACAGATGCACAGCAGGAAGCACACT --output_folder MSJ20C1-ch
+
+[Execution log]:
+Trimming sequences with Trimmomatic...
+TrimmomaticPE: Started with arguments:
+ -phred33 MSJ20_37_L001_R1_001.fastq.gz MSJ20_37_L001_R2_001.fastq.gz /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/output_forward_paired.fq.gz /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/output_forward_unpaired.fq.gz /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/output_reverse_paired.fq.gz /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/output_reverse_unpaired.fq.gz ILLUMINACLIP:/Users/andresmg/MSJ20/TruSeq3-PE.fa:0:90:10:0:true
+Multiple cores found: Using 4 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 63026 Both Surviving: 62895 (99,79%) Forward Only Surviving: 4 (0,01%) Reverse Only Surviving: 9 (0,01%) Dropped: 118 (0,19%)
+TrimmomaticPE: Completed successfully
+Done!
+Estimating average read length...
+Merging paired sequences with Flash...
+Running FLASH command: flash "/Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/output_forward_paired.fq.gz" "/Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/output_reverse_paired.fq.gz" --min-overlap 10 --max-overlap 100 --allow-outies -z -d /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1 -o out >>/Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/CRISPResso_RUNNING_LOG.txt 2>&1
+[FLASH] Starting FLASH v1.2.11
+[FLASH] Fast Length Adjustment of SHort reads
+[FLASH]  
+[FLASH] Input files:
+[FLASH]     /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/output_forward_paired.fq.gz
+[FLASH]     /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/output_reverse_paired.fq.gz
+[FLASH]  
+[FLASH] Output files:
+[FLASH]     /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/out.extendedFrags.fastq.gz
+[FLASH]     /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/out.notCombined_1.fastq.gz
+[FLASH]     /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/out.notCombined_2.fastq.gz
+[FLASH]     /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/out.hist
+[FLASH]     /Users/andresmg/MSJ20/FASTQ/MSJ20C1-ch/CRISPResso_on_WT1_KO_Cr1_C1-D1/out.histogram
+[FLASH]  
+[FLASH] Parameters:
+[FLASH]     Min overlap:           10
+[FLASH]     Max overlap:           100
+[FLASH]     Max mismatch density:  0.250000
+[FLASH]     Allow "outie" pairs:   true
+[FLASH]     Cap mismatch quals:    false
+[FLASH]     Combiner threads:      4
+[FLASH]     Input format:          FASTQ, phred_offset=33
+[FLASH]     Output format:         FASTQ, phred_offset=33, gzip
+[FLASH]  
+[FLASH] Starting reader and writer threads
+[FLASH] Starting 4 combiner threads
+[FLASH] Processed 25000 read pairs
+[FLASH] Processed 50000 read pairs
+[FLASH] Processed 62895 read pairs
+[FLASH]  
+[FLASH] Read combination statistics:
+[FLASH]     Total pairs:      62895
+[FLASH]     Combined pairs:   61182
+[FLASH]         Innie pairs:   60407 (98.73% of combined)
+[FLASH]         Outie pairs:   775 (1.27% of combined)
+[FLASH]     Uncombined pairs: 1713
+[FLASH]     Percent combined: 97.28%
+[FLASH]  
+[FLASH] Writing histogram files.
+[FLASH] WARNING: An unexpectedly high proportion of combined pairs (77.16%)
+overlapped by more than 100 bp, the --max-overlap (-M) parameter.  Consider
+increasing this parameter.  (As-is, FLASH is penalizing overlaps longer than
+100 bp when considering them for possible combining!)
+[FLASH]  
+[FLASH] FLASH v1.2.11 complete!
+[FLASH] 1.735 seconds elapsed
+[FLASH] Finished with 1 warning (see above)
+Done!
+Aligning sequences...
+Processing reads; N_TOT_READS: 0 N_COMPUTED_ALN: 0 N_CACHED_ALN: 0 N_COMPUTED_NOTALN: 0 N_CACHED_NOTALN: 0
+Processing reads; N_TOT_READS: 10000 N_COMPUTED_ALN: 8 N_CACHED_ALN: 20 N_COMPUTED_NOTALN: 1653 N_CACHED_NOTALN: 8319
+Processing reads; N_TOT_READS: 20000 N_COMPUTED_ALN: 17 N_CACHED_ALN: 53 N_COMPUTED_NOTALN: 2939 N_CACHED_NOTALN: 16991
+Processing reads; N_TOT_READS: 30000 N_COMPUTED_ALN: 23 N_CACHED_ALN: 76 N_COMPUTED_NOTALN: 4249 N_CACHED_NOTALN: 25652
+Processing reads; N_TOT_READS: 40000 N_COMPUTED_ALN: 28 N_CACHED_ALN: 99 N_COMPUTED_NOTALN: 5451 N_CACHED_NOTALN: 34422
+Processing reads; N_TOT_READS: 50000 N_COMPUTED_ALN: 31 N_CACHED_ALN: 132 N_COMPUTED_NOTALN: 6610 N_CACHED_NOTALN: 43227
+Processing reads; N_TOT_READS: 60000 N_COMPUTED_ALN: 36 N_CACHED_ALN: 165 N_COMPUTED_NOTALN: 7809 N_CACHED_NOTALN: 51990
+Finished reads; N_TOT_READS: 61182 N_COMPUTED_ALN: 36 N_CACHED_ALN: 167 N_COMPUTED_NOTALN: 7959 N_CACHED_NOTALN: 53020
+Done!
+Quantifying indels/substitutions...
+Done!
+Calculating allele frequencies...
+Done!
+Saving processed data...
+Making Plots...
+Done!
+Removing Intermediate files...
+Analysis Complete!

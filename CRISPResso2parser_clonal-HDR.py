@@ -608,7 +608,7 @@ if (CODING_seq == 'NO'):
                       'in Terminal and run again the script.')
             
 print('\n\nThank you for using CRISPResso2parser_clonal-HDR.py \n\n'\
-      'Enjoy your the view of your CRISPResso2 results summary! :)\n\n')
+      'Enjoy the view of your CRISPResso2 results summary! :)\n\n')
            
 
 

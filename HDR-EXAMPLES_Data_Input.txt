@@ -1,0 +1,10 @@
+Enter your results folder: 
+HDR-EX
+Enter your desired clone purity value: 
+80
+Have you provided coding sequence to CRISPResso? (YES or NO): 
+YES
+Enter your HDR templates names separated by 1 white space: 
+HDR1 HDR2
+Enter your respectively HDR sequences separated by 1 white space: 
+testsequenceGAGGCAGAGAGACCGGGCCGCTGAGGCCAAGGAAAGGTACtestsequence testsequenceGAGGCGAAGAGACCGGGCCGCTGAGGCCAAGGAAAGGTACtestsequence
