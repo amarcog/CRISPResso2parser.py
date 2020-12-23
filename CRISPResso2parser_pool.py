@@ -88,8 +88,8 @@ for i in range(0,(len(FolderList))):
         Aligned_reads.append(ReadsData.iloc[0][2])
         InFrameMutations.append(MutationsData.iloc[1][1])
         FrameshiftMutations.append(MutationsData.iloc[2][1])
-        UnModified_reads.append(Editing_Quantification.iloc[0][6])
-        Modified_reads.append(Editing_Quantification.iloc[0][7])
+        UnModified_reads.append(Editing_Quantification.iloc[0][5])
+        Modified_reads.append(Editing_Quantification.iloc[0][6])
 
         os.chdir("..")
     
@@ -113,8 +113,8 @@ for i in range(0,(len(FolderList))):
         Aligned_reads.append(ReadsData.iloc[0][2])
         InFrameMutations.append(np.nan)
         FrameshiftMutations.append(np.nan)
-        UnModified_reads.append(Editing_Quantification.iloc[0][6])
-        Modified_reads.append(Editing_Quantification.iloc[0][7])
+        UnModified_reads.append(Editing_Quantification.iloc[0][5])
+        Modified_reads.append(Editing_Quantification.iloc[0][6])
     
         os.chdir("..")
     
